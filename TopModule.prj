@@ -1,0 +1,2 @@
+vhdl work "ipcore_dir/DigitalClockManager.vhd"
+vhdl work "TopModule.vhd"

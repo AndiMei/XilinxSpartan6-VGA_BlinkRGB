@@ -1,0 +1,184 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Aug 02 16:37:00 2022
+# Process ID: 2776
+# Log file: D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/planAhead_run_1/planAhead.log
+# Journal file: D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+INFO: [Common 17-78] Attempting to get a license: PlanAhead
+INFO: [Common 17-290] Got license for PlanAhead
+INFO: [Common 17-86] Your PlanAhead license expires in -1006 day(s)
+INFO: [Device 21-36] Loading parts and site information from C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/arch.xml
+Parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+Finished parsing RTL primitives file [C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/prims/rtl_prims.xml]
+start_gui
+source {D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/pa.fromHdl.tcl}
+# create_project -name XilinxSpartan6-VGA_BlinkRGB -dir "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/planAhead_run_2" -part xc6slx25ftg256-3
+create_project: Time (s): elapsed = 00:00:10 . Memory (MB): peak = 451.402 ; gain = 58.988
+# set_param project.pinAheadLayout yes
+# set srcset [get_property srcset [current_run -impl]]
+# set_property target_constrs_file "TopModule.ucf" [current_fileset -constrset]
+Adding file 'D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TopModule.ucf' to fileset 'constrs_1'
+# set hdlfile [add_files [list {ipcore_dir/DigitalClockManager.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set hdlfile [add_files [list {TopModule.vhd}]]
+# set_property file_type VHDL $hdlfile
+# set_property library work $hdlfile
+# set_property top TopModule $srcset
+# add_files [list {TopModule.ucf}] -fileset [get_property constrset [current_run]]
+# open_rtl_design -part xc6slx25ftg256-3
+Using Verific elaboration
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "C:/Xilinx/14.7/ISE_DS/PlanAhead/data/parts/xilinx/rtl/lib/synplify/synattr.vhd" into library synplify
+Parsing VHDL file "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/ipcore_dir/DigitalClockManager.vhd" into library work
+Parsing VHDL file "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TopModule.vhd" into library work
+Loading clock regions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx25/ClockRegion.xml
+Loading clock buffers from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx25/ClockBuffers.xml
+Loading package pin functions from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/PinFunctions.xml...
+Loading package from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/spartan6lx/xc6slx25/ftg256/Package.xml
+Loading io standards from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/IOStandards.xml
+Loading device configuration modes from C:/Xilinx/14.7/ISE_DS/PlanAhead/data\parts/xilinx/spartan6/ConfigModes.xml
+Loading list of drcs for the architecture : C:/Xilinx/14.7/ISE_DS/PlanAhead/data\./parts/xilinx/spartan6/drc.xml
+Parsing UCF File [D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TopModule.ucf]
+Finished Parsing UCF File [D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TopModule.ucf]
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Phase 0 | Netlist Checksum: 6f5d2f12
+open_rtl_design: Time (s): elapsed = 00:00:09 . Memory (MB): peak = 652.383 ; gain = 196.949
+update_compile_order -fileset sim_1
+set_property iostandard LVCMOS25 [get_ports [list {VGA_BLUE[5]}]]
+set_property iostandard LVCMOS25 [get_ports [list {VGA_BLUE[7]}]]
+set_property iostandard LVCMOS33 [get_ports [list CLK]]
+set_property iostandard LVCMOS33 [get_ports [list VGA_CLK]]
+set_property iostandard LVCMOS33 [get_ports [list VGA_HSYC]]
+set_property iostandard LVCMOS33 [get_ports [list VGA_VSYNC]]
+startgroup
+set_property package_pin M9 [get_ports CLK]
+endgroup
+set_property package_pin "" [get_ports [list  VGA_CLK]]
+set_property package_pin "" [get_ports [list  VGA_VSYNC]]
+startgroup
+set_property package_pin N16 [get_ports VGA_HSYC]
+endgroup
+save_constraints
+startgroup
+set_property package_pin P15 [get_ports VGA_VSYNC]
+endgroup
+set_property is_loc_fixed false [get_ports [list  VGA_HSYC]]
+set_property is_loc_fixed false [get_ports [list  VGA_VSYNC]]
+set_property is_loc_fixed true [get_ports [list  VGA_VSYNC]]
+set_property is_loc_fixed false [get_ports [list  VGA_VSYNC]]
+set_property is_loc_fixed true [get_ports [list  VGA_VSYNC]]
+set_property is_loc_fixed false [get_ports [list  VGA_VSYNC]]
+save_constraints
+startgroup
+set_property package_pin E11 [get_ports VGA_CLK]
+endgroup
+set_property is_loc_fixed true [get_ports [list  VGA_VSYNC]]
+set_property is_loc_fixed true [get_ports [list  VGA_HSYC]]
+set_property is_loc_fixed false [get_ports [list  VGA_HSYC]]
+set_property is_loc_fixed true [get_ports [list  VGA_HSYC]]
+save_constraints
+set_property iostandard LVCMOS33 [get_ports [list {VGA_BLUE[6]}]]
+set_property iostandard LVCMOS33 [get_ports [list {VGA_BLUE[7]}]]
+set_property iostandard LVCMOS33 [get_ports [list {VGA_BLUE[7]} {VGA_BLUE[6]} {VGA_BLUE[5]} {VGA_BLUE[4]} {VGA_BLUE[3]} {VGA_BLUE[2]} {VGA_BLUE[1]} {VGA_BLUE[0]}]]
+set_property iostandard LVCMOS25 [get_ports [list {VGA_GREEN[7]} {VGA_GREEN[6]} {VGA_GREEN[5]} {VGA_GREEN[4]} {VGA_GREEN[3]} {VGA_GREEN[2]} {VGA_GREEN[1]} {VGA_GREEN[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {VGA_GREEN[7]} {VGA_GREEN[6]} {VGA_GREEN[5]} {VGA_GREEN[4]} {VGA_GREEN[3]} {VGA_GREEN[2]} {VGA_GREEN[1]} {VGA_GREEN[0]}]]
+set_property iostandard LVCMOS33 [get_ports [list {VGA_RED[7]} {VGA_RED[6]} {VGA_RED[5]} {VGA_RED[4]} {VGA_RED[3]} {VGA_RED[2]} {VGA_RED[1]} {VGA_RED[0]}]]
+save_constraints
+set_property package_pin "" [get_ports [list  {VGA_BLUE[7]}]]
+startgroup
+set_property package_pin M13 [get_ports {VGA_BLUE[0]}]
+endgroup
+startgroup
+set_property package_pin L13 [get_ports {VGA_BLUE[1]}]
+endgroup
+startgroup
+set_property package_pin L14 [get_ports {VGA_BLUE[2]}]
+endgroup
+startgroup
+set_property package_pin J14 [get_ports {VGA_BLUE[3]}]
+endgroup
+startgroup
+set_property package_pin H13 [get_ports {VGA_BLUE[4]}]
+endgroup
+startgroup
+set_property package_pin G14 [get_ports {VGA_BLUE[5]}]
+endgroup
+startgroup
+set_property package_pin E13 [get_ports {VGA_BLUE[6]}]
+endgroup
+startgroup
+set_property package_pin D14 [get_ports {VGA_BLUE[7]}]
+endgroup
+startgroup
+set_property package_pin L16 [get_ports {VGA_GREEN[4]}]
+endgroup
+startgroup
+set_property package_pin M16 [get_ports {VGA_GREEN[7]}]
+endgroup
+set_property package_pin "" [get_ports [list  {VGA_GREEN[7]}]]
+startgroup
+set_property package_pin M16 [get_ports {VGA_GREEN[7]}]
+endgroup
+set_property package_pin "" [get_ports [list  {VGA_GREEN[6]}]]
+set_property package_pin "" [get_ports [list  {VGA_GREEN[7]}]]
+startgroup
+set_property package_pin M16 [get_ports {VGA_GREEN[6]}]
+endgroup
+startgroup
+set_property package_pin M15 [get_ports {VGA_GREEN[5]}]
+endgroup
+startgroup
+set_property package_pin L16 [get_ports {VGA_GREEN[4]}]
+endgroup
+startgroup
+set_property package_pin N14 [get_ports {VGA_GREEN[7]}]
+endgroup
+startgroup
+set_property package_pin K16 [get_ports {VGA_GREEN[2]}]
+endgroup
+startgroup
+set_property package_pin K15 [get_ports {VGA_GREEN[1]}]
+endgroup
+startgroup
+set_property package_pin J16 [get_ports {VGA_GREEN[0]}]
+endgroup
+startgroup
+set_property package_pin K14 [get_ports {VGA_GREEN[3]}]
+endgroup
+set_property is_loc_fixed false [get_ports [list  {VGA_GREEN[1]}]]
+set_property is_loc_fixed true [get_ports [list  {VGA_GREEN[1]}]]
+save_constraints
+startgroup
+set_property package_pin H14 [get_ports {VGA_RED[7]}]
+endgroup
+startgroup
+set_property package_pin H16 [get_ports {VGA_RED[6]}]
+endgroup
+startgroup
+set_property package_pin H15 [get_ports {VGA_RED[5]}]
+endgroup
+startgroup
+set_property package_pin G16 [get_ports {VGA_RED[4]}]
+endgroup
+set_property package_pin "" [get_ports [list  {VGA_RED[3]}]]
+startgroup
+set_property package_pin F16 [get_ports {VGA_RED[2]}]
+endgroup
+startgroup
+set_property package_pin F15 [get_ports {VGA_RED[1]}]
+endgroup
+startgroup
+set_property package_pin E16 [get_ports {VGA_RED[0]}]
+endgroup
+startgroup
+set_property package_pin F14 [get_ports {VGA_RED[3]}]
+endgroup
+startgroup
+set_property package_pin F15 [get_ports {VGA_RED[1]}]
+endgroup
+save_constraints

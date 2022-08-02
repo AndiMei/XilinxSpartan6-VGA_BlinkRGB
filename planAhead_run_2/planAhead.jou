@@ -1,0 +1,10 @@
+#-----------------------------------------------------------
+# PlanAhead v14.7 (64-bit)
+# Build 321239 by xbuild on Fri Sep 27 19:29:51 MDT 2013
+# Start of session at: Tue Aug 02 16:37:19 2022
+# Process ID: 16904
+# Log file: D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/planAhead_run_2/planAhead.log
+# Journal file: D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/planAhead_run_2/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source {D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/pa.fromHdl.tcl}
