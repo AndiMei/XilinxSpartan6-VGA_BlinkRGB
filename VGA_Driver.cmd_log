@@ -1,0 +1,2 @@
+vhdtdtfi -prj XilinxSpartan6-VGA_BlinkRGB -o "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/VGA_Driver.vhi" -module VGA_Driver -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VGA_Driver.vhd 
+vhdtdtfi -prj XilinxSpartan6-VGA_BlinkRGB -o "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/VGA_Driver.vhi" -module VGA_Driver -template C:/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work VGA_Driver.vhd 

@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TB_TopModule_isim_beh.exe" -prj "D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/TB_TopModule_beh.prj" "work.TB_TopModule" 

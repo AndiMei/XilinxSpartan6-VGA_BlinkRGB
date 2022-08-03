@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.11 secs
+Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: TopModule.prj
 
@@ -111,6 +111,9 @@ Cores Search Directories           : {"ipcore_dir"  }
 Parsing VHDL file "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\ipcore_dir\DigitalClockManager.vhd" into library work
 Parsing entity <DigitalClockManager>.
 Parsing architecture <xilinx> of entity <digitalclockmanager>.
+Parsing VHDL file "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\VGA_Driver.vhd" into library work
+Parsing entity <VGA_Driver>.
+Parsing architecture <Behavioral> of entity <vga_driver>.
 Parsing VHDL file "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd" into library work
 Parsing entity <TopModule>.
 Parsing architecture <Behavioral> of entity <topmodule>.
@@ -123,16 +126,28 @@ Elaborating entity <TopModule> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <DigitalClockManager> (architecture <xilinx>) from library <work>.
 
+Elaborating entity <VGA_Driver> (architecture <Behavioral>) from library <work>.
+
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <TopModule>.
     Related source file is "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd".
-INFO:Xst:3210 - "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd" line 60: Output port <CLK_OUT1> of the instance <Inst_DigitalClockManager> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd" line 60: Output port <CLK_OUT2> of the instance <Inst_DigitalClockManager> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd" line 97: Output port <OUT_CNTH> of the instance <Inst_VGA_Driver> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd" line 97: Output port <OUT_CNTV> of the instance <Inst_VGA_Driver> is unconnected or connected to loadless signal.
+    Found 32-bit register for signal <proc_colorGen.cntColor>.
+    Found 24-bit register for signal <colorPixelBuf>.
+    Found 24-bit register for signal <colorPixel>.
+    Found 32-bit register for signal <proc_colorGen.cnt>.
+    Found 32-bit adder for signal <proc_colorGen.cntColor[31]_GND_5_o_add_2_OUT> created at line 122.
+    Found 32-bit adder for signal <proc_colorGen.cnt[31]_GND_5_o_add_10_OUT> created at line 135.
+    Found 4x24-bit Read Only RAM for signal <_n0040>
     Summary:
-	no macro.
+	inferred   1 RAM(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred 112 D-type flip-flop(s).
+	inferred   1 Multiplexer(s).
 Unit <TopModule> synthesized.
 
 Synthesizing Unit <DigitalClockManager>.
@@ -141,10 +156,49 @@ Synthesizing Unit <DigitalClockManager>.
 	no macro.
 Unit <DigitalClockManager> synthesized.
 
+Synthesizing Unit <VGA_Driver>.
+    Related source file is "D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\VGA_Driver.vhd".
+    Found 10-bit register for signal <v_cnt>.
+    Found 11-bit register for signal <h_cnt>.
+    Found 10-bit adder for signal <v_cnt[9]_GND_14_o_add_19_OUT> created at line 103.
+    Found 11-bit adder for signal <h_cnt[10]_GND_14_o_add_21_OUT> created at line 106.
+    Found 11-bit comparator greater for signal <GND_14_o_h_cnt[10]_LessThan_1_o> created at line 81
+    Found 11-bit comparator lessequal for signal <n0002> created at line 81
+    Found 10-bit comparator greater for signal <PWR_9_o_v_cnt[9]_LessThan_3_o> created at line 82
+    Found 10-bit comparator lessequal for signal <n0007> created at line 82
+    Found 11-bit comparator greater for signal <h_cnt[10]_GND_14_o_LessThan_5_o> created at line 84
+    Found 10-bit comparator greater for signal <v_cnt[9]_PWR_9_o_LessThan_6_o> created at line 84
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  21 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   3 Multiplexer(s).
+Unit <VGA_Driver> synthesized.
+
 =========================================================================
 HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# RAMs                                                 : 1
+ 4x24-bit single-port Read Only RAM                    : 1
+# Adders/Subtractors                                   : 4
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 1
+ 32-bit adder                                          : 2
+# Registers                                            : 6
+ 10-bit register                                       : 1
+ 11-bit register                                       : 1
+ 24-bit register                                       : 2
+ 32-bit register                                       : 2
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 2
+ 11-bit comparator lessequal                           : 1
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
 =========================================================================
 
 =========================================================================
@@ -152,28 +206,79 @@ Found no macro
 =========================================================================
 
 
+Synthesizing (advanced) Unit <TopModule>.
+The following registers are absorbed into counter <proc_colorGen.cnt>: 1 register on signal <proc_colorGen.cnt>.
+The following registers are absorbed into counter <proc_colorGen.cntColor>: 1 register on signal <proc_colorGen.cntColor>.
+INFO:Xst:3231 - The small RAM <Mram__n0040> will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+    -----------------------------------------------------------------------
+    | ram_type           | Distributed                         |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 4-word x 24-bit                     |          |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <proc_colorGen.cntColor[31]_GND_5_o_mux_3_OUT<1:0>> |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to internal node          |          |
+    -----------------------------------------------------------------------
+Unit <TopModule> synthesized (advanced).
+
+Synthesizing (advanced) Unit <VGA_Driver>.
+The following registers are absorbed into counter <h_cnt>: 1 register on signal <h_cnt>.
+The following registers are absorbed into counter <v_cnt>: 1 register on signal <v_cnt>.
+Unit <VGA_Driver> synthesized (advanced).
+
 =========================================================================
 Advanced HDL Synthesis Report
 
-Found no macro
+Macro Statistics
+# RAMs                                                 : 1
+ 4x24-bit single-port distributed Read Only RAM        : 1
+# Adders/Subtractors                                   : 1
+ 32-bit adder                                          : 1
+# Counters                                             : 4
+ 10-bit up counter                                     : 1
+ 11-bit up counter                                     : 1
+ 32-bit up counter                                     : 2
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+# Comparators                                          : 6
+ 10-bit comparator greater                             : 2
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator greater                             : 2
+ 11-bit comparator lessequal                           : 1
+# Multiplexers                                         : 4
+ 32-bit 2-to-1 multiplexer                             : 1
+ 8-bit 2-to-1 multiplexer                              : 3
+
 =========================================================================
 
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+INFO:Xst:2261 - The FF/Latch <colorPixelBuf_16> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixelBuf_17> <colorPixelBuf_18> <colorPixelBuf_19> <colorPixelBuf_20> <colorPixelBuf_21> <colorPixelBuf_22> <colorPixelBuf_23> 
+INFO:Xst:2261 - The FF/Latch <colorPixelBuf_0> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixelBuf_1> <colorPixelBuf_2> <colorPixelBuf_3> <colorPixelBuf_4> <colorPixelBuf_5> <colorPixelBuf_6> <colorPixelBuf_7> 
+INFO:Xst:2261 - The FF/Latch <colorPixelBuf_8> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixelBuf_9> <colorPixelBuf_10> <colorPixelBuf_11> <colorPixelBuf_12> <colorPixelBuf_13> <colorPixelBuf_14> <colorPixelBuf_15> 
+INFO:Xst:2261 - The FF/Latch <colorPixel_8> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixel_9> <colorPixel_10> <colorPixel_11> <colorPixel_12> <colorPixel_13> <colorPixel_14> <colorPixel_15> 
+INFO:Xst:2261 - The FF/Latch <colorPixel_16> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixel_17> <colorPixel_18> <colorPixel_19> <colorPixel_20> <colorPixel_21> <colorPixel_22> <colorPixel_23> 
+INFO:Xst:2261 - The FF/Latch <colorPixel_0> in Unit <TopModule> is equivalent to the following 7 FFs/Latches, which will be removed : <colorPixel_1> <colorPixel_2> <colorPixel_3> <colorPixel_4> <colorPixel_5> <colorPixel_6> <colorPixel_7> 
 
 Optimizing unit <TopModule> ...
 
+Optimizing unit <VGA_Driver> ...
+
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 0.
+Found area constraint ratio of 100 (+ 5) on block TopModule, actual ratio is 1.
 
 Final Macro Processing ...
 
 =========================================================================
 Final Register Report
 
-Found no macro
+Macro Statistics
+# Registers                                            : 91
+ Flip-Flops                                            : 91
+
 =========================================================================
 
 =========================================================================
@@ -195,12 +300,30 @@ Top Level Output File Name         : TopModule.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 1
+# BELS                             : 432
 #      GND                         : 1
+#      INV                         : 6
+#      LUT1                        : 112
+#      LUT2                        : 34
+#      LUT3                        : 4
+#      LUT4                        : 5
+#      LUT5                        : 5
+#      LUT6                        : 34
+#      MUXCY                       : 112
+#      MUXF7                       : 1
+#      VCC                         : 1
+#      XORCY                       : 117
+# FlipFlops/Latches                : 92
+#      FD                          : 3
+#      FDE                         : 35
+#      FDR                         : 43
+#      FDRE                        : 10
+#      ODDR2                       : 1
 # Clock Buffers                    : 4
 #      BUFG                        : 4
-# IO Buffers                       : 1
+# IO Buffers                       : 28
 #      IBUFG                       : 1
+#      OBUF                        : 27
 # DCMs                             : 1
 #      DCM_SP                      : 1
 
@@ -211,17 +334,20 @@ Selected Device : 6slx25ftg256-3
 
 
 Slice Logic Utilization: 
+ Number of Slice Registers:              92  out of  30064     0%  
+ Number of Slice LUTs:                  200  out of  15032     1%  
+    Number used as Logic:               200  out of  15032     1%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:      0
-   Number with an unused Flip Flop:       0  out of      0         
-   Number with an unused LUT:             0  out of      0         
-   Number of fully used LUT-FF pairs:     0  out of      0         
-   Number of unique control sets:         0
+ Number of LUT Flip Flop pairs used:    213
+   Number with an unused Flip Flop:     121  out of    213    56%  
+   Number with an unused LUT:            13  out of    213     6%  
+   Number of fully used LUT-FF pairs:    79  out of    213    37%  
+   Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          28
- Number of bonded IOBs:                   1  out of    186     0%  
+ Number of bonded IOBs:                  28  out of    186    15%  
 
 Specific Feature Utilization:
  Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
@@ -244,7 +370,12 @@ NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
 
 Clock Information:
 ------------------
-No clock signals found in this design
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+CLK                                | DCM_SP:CLKFX           | 26    |
+CLK                                | DCM_SP:CLK2X           | 67    |
+-----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -254,9 +385,9 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: No path found
+   Minimum period: 11.178ns (Maximum Frequency: 89.459MHz)
    Minimum input arrival time before clock: No path found
-   Maximum output required time after clock: No path found
+   Maximum output required time after clock: 6.171ns
    Maximum combinational path delay: No path found
 
 Timing Details:
@@ -264,21 +395,77 @@ Timing Details:
 All values displayed in nanoseconds (ns)
 
 =========================================================================
+Timing constraint: Default period analysis for Clock 'CLK'
+  Clock period: 11.178ns (frequency: 89.459MHz)
+  Total number of paths / destination ports: 6955 / 189
+-------------------------------------------------------------------------
+Delay:               5.589ns (Levels of Logic = 6)
+  Source:            proc_colorGen.cnt_8 (FF)
+  Destination:       colorPixelBuf_16 (FF)
+  Source Clock:      CLK rising 2.0X
+  Destination Clock: CLK rising 2.0X
+
+  Data Path: proc_colorGen.cnt_8 to colorPixelBuf_16
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              2   0.447   0.981  proc_colorGen.cnt_8 (proc_colorGen.cnt_8)
+     LUT6:I0->O            3   0.203   0.879  _n004324 (_n004324)
+     LUT6:I3->O            4   0.205   0.788  _n004325 (_n004325)
+     LUT4:I2->O            3   0.203   0.651  _n00431 (_n00431)
+     LUT6:I5->O            1   0.205   0.000  _n00439_SW4_G (N28)
+     MUXF7:I1->O           1   0.140   0.580  _n00439_SW4 (N16)
+     LUT6:I5->O            1   0.205   0.000  colorPixelBuf_16_rstpot1 (colorPixelBuf_16_rstpot1)
+     FD:D                      0.102          colorPixelBuf_16
+    ----------------------------------------
+    Total                      5.589ns (1.710ns logic, 3.879ns route)
+                                       (30.6% logic, 69.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK'
+  Total number of paths / destination ports: 354 / 26
+-------------------------------------------------------------------------
+Offset:              6.171ns (Levels of Logic = 3)
+  Source:            Inst_VGA_Driver/h_cnt_10 (FF)
+  Destination:       VGA_RED<7> (PAD)
+  Source Clock:      CLK rising 0.8X
+
+  Data Path: Inst_VGA_Driver/h_cnt_10 to VGA_RED<7>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.447   1.048  Inst_VGA_Driver/h_cnt_10 (Inst_VGA_Driver/h_cnt_10)
+     LUT6:I0->O            3   0.203   0.898  Inst_VGA_Driver/h_cnt[10]_v_cnt[9]_AND_3_o1 (Inst_VGA_Driver/h_cnt[10]_v_cnt[9]_AND_3_o1)
+     LUT4:I0->O            8   0.203   0.802  Inst_VGA_Driver/Mmux_OUT_BLUE11 (VGA_BLUE_0_OBUF)
+     OBUF:I->O                 2.571          VGA_BLUE_0_OBUF (VGA_BLUE<0>)
+    ----------------------------------------
+    Total                      6.171ns (3.424ns logic, 2.747ns route)
+                                       (55.5% logic, 44.5% route)
+
+=========================================================================
 
 Cross Clock Domains Report:
 --------------------------
 
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.902|         |         |         |
+---------------+---------+---------+---------+---------+
+
 =========================================================================
 
 
-Total REAL time to Xst completion: 6.00 secs
-Total CPU time to Xst completion: 5.86 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.54 secs
  
 --> 
 
-Total memory usage is 4502108 kilobytes
+Total memory usage is 4518300 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
-Number of infos    :    2 (   0 filtered)
+Number of infos    :    9 (   0 filtered)
 

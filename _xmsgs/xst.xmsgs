@@ -5,10 +5,31 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT1</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_DigitalClockManager</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd</arg>&quot; line <arg fmt="%s" index="2">97</arg>: Output port &lt;<arg fmt="%s" index="3">OUT_CNTH</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_VGA_Driver</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd</arg>&quot; line <arg fmt="%s" index="2">60</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_DigitalClockManager</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.vhd</arg>&quot; line <arg fmt="%s" index="2">97</arg>: Output port &lt;<arg fmt="%s" index="3">OUT_CNTV</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">Inst_VGA_Driver</arg>&gt; is unconnected or connected to loadless signal.
+</msg>
+
+<msg type="info" file="Xst" num="3231" delta="new" >The small RAM &lt;<arg fmt="%s" index="1">Mram__n0040</arg>&gt; will be implemented on LUTs in order to maximize performance and save block RAM resources. If you want to force its implementation on block, use option/constraint ram_style.
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixelBuf_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixelBuf_17&gt; &lt;colorPixelBuf_18&gt; &lt;colorPixelBuf_19&gt; &lt;colorPixelBuf_20&gt; &lt;colorPixelBuf_21&gt; &lt;colorPixelBuf_22&gt; &lt;colorPixelBuf_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixelBuf_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixelBuf_1&gt; &lt;colorPixelBuf_2&gt; &lt;colorPixelBuf_3&gt; &lt;colorPixelBuf_4&gt; &lt;colorPixelBuf_5&gt; &lt;colorPixelBuf_6&gt; &lt;colorPixelBuf_7&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixelBuf_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixelBuf_9&gt; &lt;colorPixelBuf_10&gt; &lt;colorPixelBuf_11&gt; &lt;colorPixelBuf_12&gt; &lt;colorPixelBuf_13&gt; &lt;colorPixelBuf_14&gt; &lt;colorPixelBuf_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixel_8</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixel_9&gt; &lt;colorPixel_10&gt; &lt;colorPixel_11&gt; &lt;colorPixel_12&gt; &lt;colorPixel_13&gt; &lt;colorPixel_14&gt; &lt;colorPixel_15&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixel_16</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixel_17&gt; &lt;colorPixel_18&gt; &lt;colorPixel_19&gt; &lt;colorPixel_20&gt; &lt;colorPixel_21&gt; &lt;colorPixel_22&gt; &lt;colorPixel_23&gt; </arg>
+</msg>
+
+<msg type="info" file="Xst" num="2261" delta="new" >The FF/Latch &lt;<arg fmt="%s" index="1">colorPixel_0</arg>&gt; in Unit &lt;<arg fmt="%s" index="2">TopModule</arg>&gt; is equivalent to the following <arg fmt="%s" index="3">7 FFs/Latches</arg>, which will be removed : <arg fmt="%s" index="4">&lt;colorPixel_1&gt; &lt;colorPixel_2&gt; &lt;colorPixel_3&gt; &lt;colorPixel_4&gt; &lt;colorPixel_5&gt; &lt;colorPixel_6&gt; &lt;colorPixel_7&gt; </arg>
 </msg>
 
 </messages>

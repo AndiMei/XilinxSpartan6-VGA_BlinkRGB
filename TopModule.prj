@@ -1,2 +1,3 @@
 vhdl work "ipcore_dir/DigitalClockManager.vhd"
+vhdl work "VGA_Driver.vhd"
 vhdl work "TopModule.vhd"

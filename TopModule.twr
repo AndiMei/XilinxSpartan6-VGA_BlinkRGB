@@ -31,11 +31,53 @@ INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on
 
 Data Sheet report:
 -----------------
-No constraints were found to generate data for the Data Sheet Report section.
-Use the Advanced Analysis (-a) option or generate global constraints for each
-clock, its pad to setup and clock to pad paths, and a pad to pad constraint.
+All values displayed in nanoseconds (ns)
 
-Analysis completed Tue Aug 02 16:55:24 2022 
+Clock CLK to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+VGA_BLUE<0> |        12.551(R)|      SLOW  |         6.432(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<1> |        11.964(R)|      SLOW  |         6.061(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<2> |        10.744(R)|      SLOW  |         5.338(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<3> |         9.950(R)|      SLOW  |         4.867(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<4> |        10.101(R)|      SLOW  |         4.970(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<5> |        10.494(R)|      SLOW  |         5.171(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<6> |        12.326(R)|      SLOW  |         6.255(R)|      FAST  |clk40mhz          |   0.000|
+VGA_BLUE<7> |        11.729(R)|      SLOW  |         5.905(R)|      FAST  |clk40mhz          |   0.000|
+VGA_CLK     |         7.327(R)|      SLOW  |         3.961(R)|      FAST  |clk40mhz          |   0.000|
+            |         7.303(F)|      SLOW  |         3.896(F)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<0>|        10.230(R)|      SLOW  |         4.991(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<1>|        10.249(R)|      SLOW  |         5.013(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<2>|        10.391(R)|      SLOW  |         5.088(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<3>|        10.780(R)|      SLOW  |         5.337(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<4>|        11.344(R)|      SLOW  |         5.662(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<5>|        10.997(R)|      SLOW  |         5.455(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<6>|        10.988(R)|      SLOW  |         5.446(R)|      FAST  |clk40mhz          |   0.000|
+VGA_GREEN<7>|        10.636(R)|      SLOW  |         5.234(R)|      FAST  |clk40mhz          |   0.000|
+VGA_HSYNC   |        10.479(R)|      SLOW  |         5.052(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<0>  |        10.940(R)|      SLOW  |         5.421(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<1>  |        10.771(R)|      SLOW  |         5.316(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<2>  |        10.740(R)|      SLOW  |         5.297(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<3>  |        12.118(R)|      SLOW  |         6.135(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<4>  |        10.579(R)|      SLOW  |         5.200(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<5>  |        10.404(R)|      SLOW  |         5.089(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<6>  |        10.386(R)|      SLOW  |         5.076(R)|      FAST  |clk40mhz          |   0.000|
+VGA_RED<7>  |        10.200(R)|      SLOW  |         4.971(R)|      FAST  |clk40mhz          |   0.000|
+VGA_VSYNC   |         9.769(R)|      SLOW  |         5.116(R)|      FAST  |clk40mhz          |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CLK
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CLK            |    5.701|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Wed Aug 03 16:20:17 2022 
 --------------------------------------------------------------------------------
 
 Trace Settings:

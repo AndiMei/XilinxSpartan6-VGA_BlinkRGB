@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.ncd
+OUTFILE=D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB\TopModule.bit
+FAMILY=Spartan6
+PART=xc6slx25-3ftg256
+WORKINGDIR=D:\AMP\Research and Development\FPGA\XilinxSpartan6-VGA_BlinkRGB
+LICENSE=WebPack
+USER_INFO=__0_0_0
