@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2022-08-03T16:15:35</DateModified>
+  <DateModified>2022-08-03T16:32:01</DateModified>
   <ModuleName>TopModule</ModuleName>
   <SummaryTimeStamp>2022-08-03T16:12:47</SummaryTimeStamp>
   <SavedFilePath>D:/AMP/Research and Development/FPGA/XilinxSpartan6-VGA_BlinkRGB/iseconfig/TopModule.xreport</SavedFilePath>
